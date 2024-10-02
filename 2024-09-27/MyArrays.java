@@ -16,6 +16,17 @@ public class MyArrays {
         return result;
     }
 
+    public static int[] concatArray(int[]ary1, int[]ary2) {
+        int[] result = new int[ary1.length + ary2.length];
+        for(int i = 0; i < ary1.length; i++) {
+            result[i] = ary1[i];
+        }
+        for(int i = 0; i < ary2.length; i++) {
+            result[ary1.length + i] = ary2[i];
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] test1 = new int[] {2, 3, 4, 5};
         System.out.println(arrayToString(test1));
@@ -26,5 +37,8 @@ public class MyArrays {
             System.out.println("It doesn't work");
         }
         System.out.println(arrayToString(test1));
+
+        int[] test2 = new int[] {3, 4, 5, 6, 7};
+        System.out.println(arrayToString(concatArray(test1, test2)));
     }
 }
