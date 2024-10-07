@@ -1,8 +1,8 @@
 import java.util.Arrays;
 public class ArrayDemo{
   public static void main(String[]args){
-    int[]
-    System.out.println("My method: " + arrayToString())
+    int[] test = {16, 6, 4, 2};
+    System.out.println("My method: " + arrayToString(test) + "\nBuilt in method: " + Arrays.toString(test));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
@@ -11,12 +11,12 @@ public class ArrayDemo{
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
-  public static String arrayToString(int[]ary){
-    String result = "{";
+  public static String arrayToString(int[]nums){
+    String result = "[";
     for(int i = 0; i < nums.length  - 1; i++) {
         result += nums[i] + ", ";
     }
-    result += nums[nums.length - 1] + "}";
+    result += nums[nums.length - 1] + "]";
     return result;
   }
 
