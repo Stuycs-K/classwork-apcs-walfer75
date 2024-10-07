@@ -3,6 +3,8 @@ public class ArrayDemo{
   public static void main(String[]args){
     int[] test = {16, 6, 4, 2};
     System.out.println("My method: " + arrayToString(test) + "\nBuilt in method: " + Arrays.toString(test));
+    int[][] test1 = {{3, 2, 1}, {3, 2, 1}, {1, 2, 3}};
+    System.out.println("My Method: " + arrToString(test1));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
@@ -24,7 +26,12 @@ public class ArrayDemo{
   //as long as the parameters are different! (type and/or quantity must be different)
   //Pro tip: you should be using your 1D arrToString in this method!
   public static String arrToString(int[][]ary){
-    return "";
+    String returnable = "[";
+    for (int i = 0; i < ary.length - 1; i++) {
+      returnable += arrayToString(ary[i]) + ", ";
+    }
+    returnable += arrayToString(ary[ary.length - 1]) + "]";
+    return returnable;
   }
 
   //1. Calculate and return how many elements equal zero in the 2D array.
@@ -38,7 +45,6 @@ public class ArrayDemo{
   public static int arr2DSum(int[][]nums){
     return 0;
   }
-
   //3. Modify a given 2D array of integer as follows:
   //Replace all the negative values:
   //-When the row number is the same as the column number replace
