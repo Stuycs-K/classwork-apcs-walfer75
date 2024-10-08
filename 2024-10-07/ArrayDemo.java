@@ -4,7 +4,7 @@ public class ArrayDemo{
     int[] test = {16, 6, 4, 2};
     System.out.println("My method: " + arrayToString(test) + "\nBuilt in method: " + Arrays.toString(test));
     int[][] test1 = {{3, 2, 1}, {3, 2, 1}, {1, 2, 3}};
-    System.out.println("My Method: " + arrToString(test1));
+    System.out.println("\nMy Method: " + arrToString(test1) + "\nBuilt in method: " + Arrays.deepToString(test1));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
