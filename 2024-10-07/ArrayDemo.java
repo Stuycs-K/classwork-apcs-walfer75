@@ -53,7 +53,13 @@ public class ArrayDemo{
   /*Return the sum of all of the values in the 2D array
    *Use a nested loop instead of a helper method*/
   public static int arr2DSum(int[][]nums){
-    return 0;
+    int counter = 0;
+    for (int i = 0; i < nums.length; i++) {
+      for (int j = 0; j < nums[i].length; i++) {
+        counter += nums[i][j];
+      }
+    }
+    return counter;
   }
   //3. Modify a given 2D array of integer as follows:
   //Replace all the negative values:
