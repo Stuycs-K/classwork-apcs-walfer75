@@ -7,6 +7,7 @@ public class ArrayDemo{
     System.out.println("\nMy Method: " + arrToString(test1) + "\nBuilt in method: " + Arrays.deepToString(test1));
     int[][] test2 = {{0, 0, 2, 3, 4}, {4, 2, 4, 0}, {0, 0, 3, 5}};
     System.out.println("\nMy Method: " + countZeros2D(test2) + ", which should be 5");
+    System.out.println("\nMy Method(arr2Dsum): " + arr2DSum(test2) + ", which should be 27"); 
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
@@ -55,7 +56,7 @@ public class ArrayDemo{
   public static int arr2DSum(int[][]nums){
     int counter = 0;
     for (int i = 0; i < nums.length; i++) {
-      for (int j = 0; j < nums[i].length; i++) {
+      for (int j = 0; j < nums[i].length; j++) {
         counter += nums[i][j];
       }
     }
