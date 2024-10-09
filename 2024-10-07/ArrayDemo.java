@@ -14,6 +14,13 @@ public class ArrayDemo{
     System.out.println("\nReplace Negative Before: " + Arrays.deepToString(test3));
     replaceNegative(test3);
     System.out.println("\nAfter: " + Arrays.deepToString(test3));
+
+    System.out.println("\nCopy test: " + Arrays.deepToString(copy(test3)));
+    String checker = "the same";
+    if (test3 != copy(test3)) {
+      checker = "not the same";
+    }
+    System.out.print("\tThey are " + checker);
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
