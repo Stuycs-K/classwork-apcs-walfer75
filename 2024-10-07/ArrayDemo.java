@@ -8,6 +8,12 @@ public class ArrayDemo{
     int[][] test2 = {{0, 0, 2, 3, 4}, {4, 2, 4, 0}, {0, 0, 3, 5}};
     System.out.println("\nMy Method: " + countZeros2D(test2) + ", which should be 5");
     System.out.println("\nMy Method(arr2Dsum): " + arr2DSum(test2) + ", which should be 27"); 
+    
+
+    int[][] test3 = {{-3, -6, 2, 3}, {2, -3, 6, -4}, {4, -2, -3, 9}, {2, 3, 5, 3}};
+    System.out.println("\nReplace Negative Before: " + Arrays.deepToString(test3));
+    replaceNegative(test3);
+    System.out.println("\nAfter: " + Arrays.deepToString(test3));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
