@@ -12,7 +12,7 @@ public class ArrayDemo{
 
     int[][] test3 = {{-3, -6, 2, 3}, {2, -3, 6, -4}, {4, -2, -3, 9}, {2, 3, 5, 3}};
     System.out.println("\nReplace Negative Before: " + Arrays.deepToString(test3));
-    replaceNegative(test3);
+    replaceNegative(test3); //Now its [[1, 0, 2, 3], [2, 1, 6, 0], [4, 0, 1, 9], [2, 3, 5, 3]]
     System.out.println("\nAfter: " + Arrays.deepToString(test3));
 
     System.out.println("\nCopy test: " + Arrays.deepToString(copy(test3)));
@@ -21,6 +21,8 @@ public class ArrayDemo{
       checker = "not the same";
     }
     System.out.print("\tThey are " + checker);
+
+    System.out.println("\n\nswapRC tester: " + Arrays.deepToString(swapRC(test3)));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
