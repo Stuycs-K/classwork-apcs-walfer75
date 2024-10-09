@@ -23,6 +23,8 @@ public class ArrayDemo{
     System.out.print("\tThey are " + checker);
 
     System.out.println("\n\nswapRC tester: " + Arrays.deepToString(swapRC(test3)));
+
+    System.out.println("\nhtmlTable tester: " + htmlTable(test3));
     //write your tests here!
     //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
     //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
