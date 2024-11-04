@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class TriangleTester {
   public static int countTrianglesA(String filename) {
@@ -33,6 +34,27 @@ public class TriangleTester {
 
   public static int countTrianglesB(String filename){
     int total = 0;
+
+    try {
+      File file = new File(filename);
+      Scanner input = new Scanner(file);
+
+      while (input.hasNextLine()) {
+        int[][] triangles = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+          triangles[i].add(input.nextInt());
+        }
+        input.nextLine();
+      }
+
+
+
+    }  catch (FileNotFoundException ex) {
+      //File not found what should you do?
+      System.out.println("File not found");
+      return (0); //you can return from a void function just don't put a value.
+    }
+    return(total);
 
   }
 }
