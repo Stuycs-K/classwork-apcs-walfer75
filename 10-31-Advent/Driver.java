@@ -9,5 +9,6 @@ import java.util.ArrayList;
        total += sc2.nextDouble();
      }
      System.out.println(total);
+     System.out.println(TriangleTester.countTrianglesA("inputTri.txt"));
    }
  }
