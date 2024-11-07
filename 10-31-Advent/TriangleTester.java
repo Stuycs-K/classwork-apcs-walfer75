@@ -1,14 +1,15 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class TriangleTester {
-
   public static int countTrianglesA(String filename) {
     int total = 0;
     try {
       File file = new File(filename);
       Scanner input = new Scanner(file);
+
       while (input.hasNextLine()) {
         int s1 = input.nextInt();
         int s2 = input.nextInt();
@@ -69,5 +70,6 @@ public class TriangleTester {
       return 0;
     }
     return total;
-  }
+      
+}
 }
