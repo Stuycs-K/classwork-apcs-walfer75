@@ -5,7 +5,8 @@ public class Driver {
       ArrayList<String> thing = ArrayListPractice.createRandomArray(10);
       System.out.println(thing.toString());
       ArrayListPractice.replaceEmpty(thing);
-      System.out.println(thing.toString() + "\n");
+      System.out.println(thing.toString());
+      System.out.println((ArrayListPractice.makeReversedList(thing)).toString() + "\n");
   }
 }
 }

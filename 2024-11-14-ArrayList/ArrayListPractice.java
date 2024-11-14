@@ -23,4 +23,13 @@ public class ArrayListPractice {
   //Modify the ArrayList such that it has all of the empty strings are
   //replaced with the word "Empty".
   }
+
+  public static ArrayList<String> makeReversedList( ArrayList<String> original){
+    ArrayList<String> result = new ArrayList<String>();
+    for(int i = original.size() - 1; i >= 0; i--){
+      result.add(original.get(i));
+    }
+    return result;
+  //return a new ArrayList that is in the reversed order of the original.
+  }
 }
