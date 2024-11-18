@@ -21,7 +21,7 @@ public class ArrayListPractice {
       }
     }
   //Modify the ArrayList such that it has all of the empty strings are
-  //replaced with the word "Empty".
+  //replaced with the word "Empty".    boolean aBig = a.size() < b.size()
   }
 
   public static ArrayList<String> makeReversedList( ArrayList<String> original){
@@ -32,4 +32,27 @@ public class ArrayListPractice {
     return result;
   //return a new ArrayList that is in the reversed order of the original.
   }
+
+  public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
+    int min = Math.min(a.size(), b.size());
+    ArrayList<String> result = new ArrayList<String>();
+    for (int i = 0; i < min; i++) {
+      result.add(a.get(i));
+      result.add(b.get(i));
+      }
+      if (a.size() < b.size()) {
+        for (int i = min; i < b.size(); i++) {
+          result.add(b.get(i));
+        }
+      }
+      else {
+        for (int i = min; i < a.size(); i++) {
+          result.add(a.get(i));
+        }
+      }
+      return result;
+  //return a new ArrayList that has all values of a and b in alternating order that is:
+  //a[0], b[0], a[1], b[1]...
+  //If one list is longer than the other, just attach the remaining values to the end.
+}
 }

@@ -10,7 +10,7 @@ public class TriangleTester {
       File file = new File(filename);
       Scanner input = new Scanner(file);
 
-      while (input.hasNextLine()) {
+      while (input.hasNextInt()) {
         int s1 = input.nextInt();
         int s2 = input.nextInt();
         int s3 = input.nextInt();
@@ -36,7 +36,7 @@ public class TriangleTester {
       Scanner input = new Scanner(file);
       while (input.hasNext()) {
         int[] l1 = new int[3];
-        int[] l2 = new int[3]; 
+        int[] l2 = new int[3];
         int[] l3 = new int[3];
         for (int i = 0; i < 3; i++) {
           l1[i] = input.nextInt();
@@ -70,6 +70,6 @@ public class TriangleTester {
       return 0;
     }
     return total;
-      
+
 }
 }
