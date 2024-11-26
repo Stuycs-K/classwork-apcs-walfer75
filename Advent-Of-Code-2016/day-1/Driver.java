@@ -1,58 +1,22 @@
 import java.util.*;
 import java.io.*;
+
 public class Driver {
-
-  public static int place(String filename) {
-    ArrayList<String> directionList = new ArrayList<String>();
-    try {
-      File file = new File(filename);
-      Scanner input = new Scanner(file);
-      while(input.hasNext()) {
-        String s = input.next();
-        directionList.add(s);
-      }
-    }catch(FileNotFoundException e) {
-      System.out.println(e + "FileNotFoundException");
-      return 0;
+    public static void main(String[] args) {
+        Direction d1 = new Direction();
+        d1.seenList("input.txt");
+        String[] directionList = new String[d1.getDirections().size()];
+        for (int i = 0; i < directionList.length; i++) {
+            directionList[i] = d1.getDirections().get(i);
+        }
+        Arrays.sort(directionList);
+        ArrayList<String> repeatList = new ArrayList<String>();
+        for(int i = 0; i < directionList.length - 1; i++) {
+            if(directionList[i].equals(directionList[i+1])) {
+                repeatList.add(directionList[i]);
+            }
+        }
+        System.out.println(repeatList.toString());
+        //185, 186, 
     }
-    for (int i = 0; i < directionList.size(); i++) {
-      directionList.set(i, directionList.get(i).replace(",", ""));
-    }
-
-
-    int direction = 0;
-    int x = 0;
-    int y = 0;
-
-    for (int i = 0; i < directionList.size(); i++) {
-      String dir = directionList.get(i).substring(0,1);
-      int amount = Integer.parseInt(directionList.get(i).substring(1));
-      if(dir.equals("R")) {
-        direction += 1;
-      }
-      else {
-        direction -= 1;
-      }
-      direction = (direction + 4) % 4;
-      System.out.println(direction);
-      if (direction == 0) {
-        y += amount;
-      }
-      if(direction == 2) {
-        y -= amount;
-      }
-      if(direction == 1) {
-        x += amount;
-      }
-      if(direction == 3) {
-        x -= amount;
-      }
-      System.out.println(x +", " + y);
-    }
-    return Math.abs(x) + Math.abs(y);
-  }
-
-  public static void main(String[] args) {
-    System.out.println(place("input.txt"));
-  }
 }
