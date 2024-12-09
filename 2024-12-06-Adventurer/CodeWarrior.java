@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 public class CodeWarrior extends Adventurer{
   private int caffeine, caffeineMax;
   private String preferredLanguage;
@@ -29,7 +32,8 @@ public class CodeWarrior extends Adventurer{
   }
 
   public int getSpecial(){
-    return caffeine;
+    return caffeine;  public void setSpecial(int n){
+
   }
 
   public void setSpecial(int n){
